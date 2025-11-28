@@ -1,0 +1,26 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景方块 -->
+  <rect width="64" height="64" fill="#1a1a1a"/>
+  
+  <!-- 草地方块顶部 -->
+  <rect x="12" y="16" width="40" height="24" fill="#52c41a"/>
+  
+  <!-- 草方块底部 -->
+  <rect x="12" y="40" width="40" height="8" fill="#389e0d"/>
+  
+  <!-- 像素化效果 - 草地 -->
+  <rect x="12" y="16" width="8" height="8" fill="#73d13d"/>
+  <rect x="28" y="16" width="8" height="8" fill="#73d13d"/>
+  <rect x="44" y="16" width="8" height="8" fill="#73d13d"/>
+  <rect x="12" y="32" width="8" height="8" fill="#73d13d"/>
+  <rect x="44" y="32" width="8" height="8" fill="#73d13d"/>
+  
+  <!-- 泥土部分像素化 -->
+  <rect x="12" y="40" width="8" height="8" fill="#2f850a"/>
+  <rect x="44" y="40" width="8" height="8" fill="#2f850a"/>
+  
+  <!-- 剑图标 -->
+  <path d="M32 24 L36 24 L38 20 L38 28 L36 24 L32 24 L30 26 L30 38 L34 42 L30 42 L32 38 L32 24Z" fill="#e0e0e0"/>
+  <path d="M32 28 L34 28 L36 24 L38 26 L36 28 L34 28 L32 26 L32 28Z" fill="#f5f5f5"/>
+  <rect x="30" y="26" width="4" height="2" fill="#999"/>
+</svg>

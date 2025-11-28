@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="root" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <VBox alignment="CENTER" padding="20.0">
+            <Label text="Minecraft启动器">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+            <Label fx:id="statusLabel" text="欢迎使用Minecraft启动器" />
+        </VBox>
+    </top>
+    
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE">
+            <!-- 登录标签页 -->
+            <Tab text="账户登录">
+                <GridPane alignment="CENTER" hgap="10.0" vgap="10.0" padding="20.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="NEVER" />
+                        <ColumnConstraints hgrow="ALWAYS" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints vgrow="NEVER" />
+                        <RowConstraints vgrow="NEVER" />
+                        <RowConstraints vgrow="NEVER" />
+                        <RowConstraints vgrow="NEVER" />
+                    </rowConstraints>
+                    <Label text="用户名:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                    <TextField fx:id="usernameField" promptText="请输入用户名" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+                    <Label text="密码:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                    <PasswordField fx:id="passwordField" promptText="请输入密码" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                    <CheckBox fx:id="rememberMeCheckBox" text="记住我" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+                    <Button fx:id="loginButton" text="登录" minWidth="80.0" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                    <Button fx:id="offlineLoginButton" text="离线模式" minWidth="80.0" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+                </GridPane>
+            </Tab>
+            
+            <!-- 游戏版本标签页 -->
+            <Tab text="游戏版本">
+                <VBox padding="20.0">
+                    <Label text="可用版本:" />
+                    <ComboBox fx:id="versionComboBox" prefWidth="200.0" />
+                    <HBox alignment="CENTER" spacing="10.0" padding="10.0">
+                        <Button fx:id="refreshVersionsButton" text="刷新版本列表" />
+                        <Button fx:id="downloadVersionButton" text="下载选中版本" />
+                    </HBox>
+                    <ListView fx:id="installedVersionsList" prefHeight="200.0" />
+                    <Button fx:id="deleteVersionButton" text="删除选中版本" />
+                </VBox>
+            </Tab>
+            
+            <!-- 启动设置标签页 -->
+            <Tab text="启动设置">
+                <GridPane alignment="CENTER" hgap="10.0" vgap="10.0" padding="20.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="NEVER" />
+                        <ColumnConstraints hgrow="ALWAYS" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints vgrow="NEVER" />
+                        <RowConstraints vgrow="NEVER" />
+                        <RowConstraints vgrow="NEVER" />
+                        <RowConstraints vgrow="NEVER" />
+                    </rowConstraints>
+                    <Label text="最大内存(MB):" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                    <TextField fx:id="maxMemoryField" text="2048" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+                    <Label text="Java路径:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                    <TextField fx:id="javaPathField" text="java" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                    <Button fx:id="browseJavaButton" text="浏览..." GridPane.rowIndex="1" GridPane.columnIndex="2" />
+                    <CheckBox fx:id="fullscreenCheckBox" text="全屏模式" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="2" />
+                    <CheckBox fx:id="enableModsCheckBox" text="启用模组支持" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2" />
+                </GridPane>
+            </Tab>
+        </TabPane>
+    </center>
+    
+    <bottom>
+        <HBox alignment="CENTER" spacing="20.0" padding="20.0">
+            <ProgressBar fx:id="progressBar" progress="0.0" prefWidth="200.0" visible="false" />
+            <Button fx:id="launchButton" text="启动游戏" minWidth="120.0" disable="true" />
+        </HBox>
+    </bottom>
+</BorderPane>
